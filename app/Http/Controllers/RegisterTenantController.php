@@ -18,7 +18,7 @@ class RegisterTenantController extends Controller
 
         $tenant = Tenant::create($request->validated());
        $tenant->domains()->create(['domain'=>$request->domain]);
-       dd($tenant);
+      // dd($tenant);
        return redirect(tenant_route($tenant->domains->first()->domain,'tenant.login'));
 
    }
