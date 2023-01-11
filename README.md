@@ -1,2 +1,0 @@
-# MediaCom
- multiTenancy 
