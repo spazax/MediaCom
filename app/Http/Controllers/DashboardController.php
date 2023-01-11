@@ -18,6 +18,7 @@ class DashboardController extends Controller
        // dd('user',Auth::user());
 
         if(Auth::user()->hasRole('admin')){
+
           return view('dashboard.admin');
 
          }elseif(Auth::user()->hasRole('instructor')){
@@ -25,6 +26,7 @@ class DashboardController extends Controller
              return view('dashboard.instructor');
          }
          elseif(Auth::user()->hasRole('learner')){
+
 
             return view('dashboard.users');
         }
